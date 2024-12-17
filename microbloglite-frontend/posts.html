@@ -1,44 +1,309 @@
 <!-- POSTS page -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Global CSS (CSS rules you want applied to all pages) -->
-    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="global.css" />
 
     <!-- Page-specific CSS -->
-    <link rel="stylesheet" href="posts.css">
+    <link rel="stylesheet" href="posts.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
 
     <title>/POSTS</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="auth.js"></script>
     <script>
-        // If the user is NOT logged in, redirect back to the landing page (index.html)
-        if (isLoggedIn() === false) window.location.replace("/");
+      // If the user is NOT logged in, redirect back to the landing page (index.html)
+      if (isLoggedIn() === false) window.location.replace("/");
     </script>
-</head>
-<body>
+  </head>
 
-    <header>
-        <h1>POSTS PAGE</h1>
-    </header>
+  <body>
+    <div class="sidebar">
+      <i class="fab fa-twitter"></i>
+      <div class="sidebarOption active">
+        <span class="material-icons"> home </span>
+        <h2>Home</h2>
+      </div>
 
-    <main></main>
+      <div class="sidebarOption">
+        <span class="material-icons"> search </span>
+        <h2>Explore</h2>
+      </div>
 
-    <footer></footer>
+      <div class="sidebarOption">
+        <span class="material-icons"> notifications_none </span>
+        <h2>Notifications</h2>
+      </div>
+
+      <div class="sidebarOption">
+        <span class="material-icons"> mail_outline </span>
+        <h2>Messages</h2>
+      </div>
+
+      <div class="sidebarOption">
+        <span class="material-icons"> bookmark_border </span>
+        <h2>Bookmarks</h2>
+      </div>
+
+      <div class="sidebarOption">
+        <span class="material-icons"> list_alt </span>
+        <h2>Lists</h2>
+      </div>
+
+      <div class="sidebarOption">
+        <span class="material-icons"> perm_identity </span>
+        <h2>Profile</h2>
+      </div>
+
+      <div class="sidebarOption">
+        <span class="material-icons"> more_horiz </span>
+        <h2>More</h2>
+      </div>
+      <button class="sidebar__tweet">Tweet</button>
+    </div>
+
+    <div class="feed">
+      <div class="feed__header">
+        <h2>Home</h2>
+      </div>
+
+      <div class="tweetBox">
+        <div class="tweetBox__tabs">
+          <span class="active">For you</span>
+          <span>Following</span>
+        </div>
+        <form>
+          <div class="tweetbox__input">
+            <img
+              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAyL3BmLWljb240LWppcjIwNjQtcG9yLTAzLWxjb3B5LnBuZw.png"
+              alt="User Avatar"
+            />
+            <input type="text" placeholder="What is happening?!" />
+          </div>
+
+          <div class="tweetbox__footer">
+            <div class="tweetbox__icons">
+              <a href="https://www.flaticon.com/" target="_blank">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/747/747310.png"
+                  alt="Image Icon"
+                />
+              </a>
+              <a href="https://www.flaticon.com/" target="_blank">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2961/2961948.png"
+                  alt="GIF Icon"
+                />
+              </a>
+              <a href="https://www.flaticon.com/" target="_blank">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1828/1828768.png"
+                  alt="Poll Icon"
+                />
+              </a>
+              <a href="https://www.flaticon.com/" target="_blank">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1828/1828773.png"
+                  alt="Emoji Icon"
+                />
+              </a>
+              <a href="https://www.flaticon.com/" target="_blank">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1828/1828775.png"
+                  alt="Schedule Icon"
+                />
+              </a>
+              <a href="https://www.flaticon.com/" target="_blank">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/535/535239.png"
+                  alt="Location Icon"
+                />
+              </a>
+            </div>
+
+            <button class="tweetBox__tweetButton" type="submit">Post</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="post">
+        <div class="post__avatar">
+          <img
+            src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAyL3BmLWljb240LWppcjIwNjQtcG9yLTAzLWxjb3B5LnBuZw.png"
+            alt=""
+          />
+        </div>
+
+        <div class="post__body">
+          <div class="post__header">
+            <div class="post__headerText">
+              <h3>
+                Mehak Sadiq Ali
+                <span class="post__headerSpecial"
+                  ><span class="material-icons post__badge"> verified </span
+                  >@meky.az</span
+                >
+              </h3>
+            </div>
+            <div class="post__headerDescription">
+              <p>Calm, refreshing, serene, balanced, rejuvenating.</p>
+            </div>
+          </div>
+          <img
+            src="https://depositphotos-blog.s3.eu-west-1.amazonaws.com/uploads/2017/07/Soothing-nature-backgrounds-2.webp"
+            alt=""
+          />
+          <div class="post__footer">
+            <span class="material-icons"> repeat </span>
+            <span class="material-icons"> favorite_border </span>
+            <span class="material-icons"> publish </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post__avatar">
+          <img
+            src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAyL3BmLWljb240LWppcjIwNjQtcG9yLTAzLWxjb3B5LnBuZw.png"
+            alt=""
+          />
+        </div>
+
+        <div class="post__body">
+          <div class="post__header">
+            <div class="post__headerText">
+              <h3>
+                Mehak Sadiq Ali
+                <span class="post__headerSpecial"
+                  ><span class="material-icons post__badge"> verified </span
+                  >@mekky.az</span
+                >
+              </h3>
+            </div>
+            <div class="post__headerDescription">
+              <p>
+                Nature is not a place to visit; it is home – where the soul
+                finds serenity and the heart feels alive.
+              </p>
+            </div>
+          </div>
+          <img
+            src="https://img.freepik.com/premium-photo/egyptian-desert-with-ancient-pyramids-sandy-landscape-fantasy-view-generative-ai-landscape-sands-monuments-historical-egypt-concept-history-nature-pharaoh_788189-11117.jpg"
+            alt=""
+          />
+          <div class="post__footer">
+            <span class="material-icons"> repeat </span>
+            <span class="material-icons"> favorite_border </span>
+            <span class="material-icons"> publish </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+    <div class="widgets">
+      <div class="widgets__input">
+        <span class="material-icons widgets__searchIcon"> search </span>
+        <input type="text" placeholder="Search Twitter" />
+      </div>
+
+      <div class="widgets__widgetContainer">
+        <h2>What's happening</h2>
+
+       
+        <div class="trendingItem">
+          <div class="trendingItem__content">
+            <a
+              href="https://x.com/i/events/1790907663011729408"
+              target="_blank"
+            >
+              <img
+                src="https://pbs.twimg.com/card_img/1868883864128458752/5TOyaT1X?format=jpg&name=small"
+                alt="Bears at Vikings"
+                class="trendingItem__image"
+              />
+              <div class="trendingItem__details">
+                <strong>Bears at Vikings</strong>
+                <p>1 hour ago</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Correction -->
+
+      <div class="trendingItem">
+        <p>Sports · Trending</p>
+        <a
+          href="https://x.com/search?q=McCaskeys&src=trend_click"
+          target="_blank"
+        >
+          <strong>McCaskeys</strong>
+        </a>
+      </div>
+
+      <div class="trendingItem">
+        <p>Sports · Trending</p>
+        <a
+          href="https://x.com/search?q=DeRozan&src=trend_click&vertical=trends"
+          target="_blank"
+        >
+          <strong>DeRozan</strong>
+        </a>
+      </div>
+
+      <div class="trendingItem">
+        <p>Sports · Trending</p>
+        <a
+          href="https://x.com/search?q=%22Jamal+Murray%22&src=trend_click&vertical=trends"
+          target="_blank"
+        >
+          <strong>Jamal Murray</strong>
+        </a>
+        <p>1,232 posts</p>
+      </div>
+
+      <div class="trendingItem">
+        <p>Sports · Trending</p>
+        <a
+          href="https://x.com/search?q=%22Aaron+Gordon%22&src=trend_click&vertical=trends"
+          target="_blank"
+        >
+          <strong>Aaron Gordon</strong>
+        </a>
+      </div>
+    </div>
 
     <!-- Page-specific code -->
     <script src="posts.js"></script>
-</body>
+  </body>
 </html>
