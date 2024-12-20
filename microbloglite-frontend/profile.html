@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="global.css" />
+
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="posts.css" />
+    <link rel="stylesheet" href="profile.css" />
+
+    <title>Profile</title>
+
+    <script src="auth.js"></script>
+    <script>
+      if (isLoggedIn() === false) window.location.replace("/");
+    </script>
+  </head>
+  <body class="bg-primary">
+    <div class="sidebar">
+      <div class="sidebarOption active">
+        <i class="uil uil-estate"></i>
+        <h2>Home</h2>
+      </div>
+      <div class="sidebarOption">
+        <i class="uil uil-search"></i>
+        <h2>Explore</h2>
+      </div>
+      <div class="sidebarOption">
+        <i class="uil uil-bell"></i>
+        <h2>Notifications</h2>
+      </div>
+      <div class="sidebarOption">
+        <i class="uil uil-edit"></i>
+        <h2>Create</h2>
+      </div>
+
+      <div class="sidebarOption">
+        <i class="uil uil-envelope"></i>
+        <h2>Messages</h2>
+      </div>
+      <div class="sidebarOption">
+        <i class="uil uil-bookmark"></i>
+        <h2>Bookmarks</h2>
+      </div>
+      <a class="text-decoration-none" href="profile.html">
+        <div class="sidebarOption">
+          <i class="uil uil-user-circle"></i>
+          <h2>Profile</h2>
+           
+        </div>
+            </a
+      >
+      <div class="sidebarOption" id="logoutButton" onclick="logout()">
+        <i class="uil uil-sign-out-alt"></i>
+        <h2>Logout</h2>
+      </div>
+
+      <div class="sidebarOption">
+        <i class="uil uil-ellipsis-h"></i>
+        <h2>More</h2>
+      </div>
+
+      <button class="sidebar_tweet">Post</button>
+    </div>
+
+    <div class="feed">
+      <div class="profile-header">
+        <div class="profile-info">
+          <h3>Mehak Sadiq Ali <span class="verified-badge">✔</span></h3>
+        </div>
+        <div class="profile-stats">
+          <span>117,268 posts</span>
+          <span>30.7M followers</span>
+          <span>559 following</span>
+        </div>
+        <div class="profile-actions">
+          <button class="btn btn-secondary message-button">Edit Profile</button>
+          <button class="btn btn-secondary message-button">
+            Share Profile
+          </button>
+        </div>
+      </div>
+      <div class="feed_header">
+        <div class="aboutMe">
+          <p>
+            <i class="uil uil-laptop"></i> Tech Enthusiast |
+            <i class="uil uil-dumbbell"></i> Fitness Lover <br />
+            <i class="uil uil-bullseye"></i> Dreaming big & working harder every
+            day
+            <br />
+            <i class="uil uil-globe"></i> Exploring, evolving, and embracing
+            challenges
+            <br />
+            <i class="uil uil-sparkles"></i> Learning, growing, and chasing my
+            goals
+            <br />
+            <i class="uil uil-book"></i> Passionate about knowledge and personal
+            growth
+            <br />
+            <i class="uil uil-heart"></i> Believer in kindness and positivity
+            <br />
+            <i class="uil uil-users-alt"></i> Building connections and inspiring
+            others
+            <br />
+            <i class="uil uil-camera"></i> Capturing life's beautiful moments
+            <br />
+            <i class="uil uil-fire"></i> Staying motivated and focused every
+            step of the way
+          </p>
+        </div>
+      </div>
+
+      <div class="tweetBox">
+        <form id="tweetForm">
+          <div class="tweetbox_input">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/034/779/514/original/winter-coat-icon-simple-illustration-free-vector.jpg"
+              alt="Avatar"
+            />
+            <input type="text" id="tweetText" placeholder="What's new?" />
+          </div>
+          <div class="tweetbox_icons">
+            <i class="uil uil-image"></i>
+            <i class="uil uil-location-point"></i>
+            <i class="uil uil-calendar-alt"></i>
+            <i class="uil uil-camera"></i>
+
+            <button type="submit" class="tweetBox_tweetButton">Post</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="postList"></div>
+    </div>
+
+    <div class="widgets">
+      <div class="widgets__input">
+        <i class="uil uil-search searchWidget"></i>
+        <input type="text" placeholder="Search" />
+      </div>
+
+      <div class="widgets__widgetContainer">
+        <h2>What's happening</h2>
+
+        <div class="trendingItem">
+          <div class="trendingItem__content">
+            <a href="https://example.com/news1" target="_blank">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Saturn_-_High_Resolution%2C_2004.jpg"
+                alt="Breaking News"
+                class="trendingItem__image"
+              />
+              <div class="trendingItem__details">
+                <strong>Breaking: Major Tech Announcement</strong>
+                <p>5 minutes ago</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="trendingItem">
+          <p>Entertainment · Trending</p>
+          <a href="https://example.com/news3" target="_blank">
+            <strong>Top Actor Announces New Movie</strong>
+          </a>
+          <p>1 hour ago</p>
+        </div>
+        <div class="videoContainer">
+          <h3>Watch This!</h3>
+          <video width="130" height="150" controls>
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+    </div>
+    <main></main>
+
+    <footer></footer>
+
+    <script src="posts.js"></script>
+  </body>
+</html>

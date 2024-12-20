@@ -192,5 +192,5 @@ async function initializePage() {
   const posts = await getPosts();
   await populatePostCards(posts);
 }
- 
+
 initializePage();

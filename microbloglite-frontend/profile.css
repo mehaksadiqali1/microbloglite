@@ -1,0 +1,47 @@
+.verified-badge {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  margin-top: 20px;
+}
+
+.profile-stats span {
+  font-size: 16px;
+}
+
+.profile-info {
+  padding-top: 70px;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-actions button {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-actions button:last-child {
+  margin-right: 0;
+}

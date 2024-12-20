@@ -1,4 +1,3 @@
-<!-- POSTS page -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,6 +12,11 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /> -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
@@ -24,16 +28,6 @@
 
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="posts.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-    />
 
     <title>/POSTS</title>
 
@@ -44,228 +38,236 @@
       if (isLoggedIn() === false) window.location.replace("/");
     </script>
   </head>
-
-  <body>
+  <body class="bg-primary">
     <div class="sidebar">
-      <i class="fab fa-twitter"></i>
       <div class="sidebarOption active">
-        <span class="material-icons"> home </span>
+        <i class="uil uil-estate"></i>
         <h2>Home</h2>
-      </div>
 
+        <div class="sidebarOption"></div>
+      </div>
       <div class="sidebarOption">
-        <span class="material-icons"> search </span>
+        <i class="uil uil-search"></i>
         <h2>Explore</h2>
       </div>
-
       <div class="sidebarOption">
-        <span class="material-icons"> notifications_none </span>
+        <i class="uil uil-bell"></i>
         <h2>Notifications</h2>
       </div>
+      <div class="sidebarOption">
+        <i class="uil uil-edit"></i>
+        <h2>Create</h2>
+      </div>
 
       <div class="sidebarOption">
-        <span class="material-icons"> mail_outline </span>
+        <i class="uil uil-envelope"></i>
         <h2>Messages</h2>
       </div>
-
       <div class="sidebarOption">
-        <span class="material-icons"> bookmark_border </span>
+        <i class="uil uil-bookmark"></i>
         <h2>Bookmarks</h2>
       </div>
-
-      <div class="sidebarOption">
-        <span class="material-icons"> list_alt </span>
-        <h2>Lists</h2>
+      <a class="text-decoration-none" href="profile.html">
+        <div class="sidebarOption">
+          <i class="uil uil-user-circle"></i>
+          <h2>Profile</h2>
+           
+        </div>
+      </a>
+      <div class="sidebarOption" id="logoutButton" onclick="logout()">
+        <i class="uil uil-sign-out-alt"></i>
+        <h2>Logout</h2>
       </div>
 
       <div class="sidebarOption">
-        <span class="material-icons"> perm_identity </span>
-        <h2>Profile</h2>
-      </div>
-
-      <div class="sidebarOption">
-        <span class="material-icons"> more_horiz </span>
+        <i class="uil uil-ellipsis-h"></i>
         <h2>More</h2>
       </div>
-      <button class="sidebar__tweet">Tweet</button>
+
+      <button class="sidebar_tweet">Thread</button>
     </div>
 
     <div class="feed">
-      <div class="feed__header">
+      <div class="feed_header">
         <h2>Home</h2>
+        <div class="stories">
+          <div class="story">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/034/779/514/original/winter-coat-icon-simple-illustration-free-vector.jpg"
+              alt="Story 1"
+            />
+            <p>Your Story</p>
+          </div>
+          <div class="story">
+            <img
+              src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/9ed52dcf-4272-45a0-9cc9-3b533e552bb9/7ae9f13d-271a-48df-b97b-a2b5431ea6eb.png"
+              alt="Story 2"
+            />
+            <p>Ang</p>
+          </div>
+          <div class="story">
+            <img
+              src="https://i.pinimg.com/originals/a7/c7/e1/a7c7e15d8510babe62bfecac15c73f3b.jpg"
+              alt="Story 3"
+            />
+            <p>Abdul</p>
+          </div>
+          <div class="story">
+            <img
+              src="https://pics.craiyon.com/2023-11-15/BcL2X-ZvT9ShA3Q5RQPjzg.webp"
+              alt="Story 4"
+            />
+            <p>Cris</p>
+          </div>
+          <div class="story">
+            <img
+              src="https://static.vecteezy.com/system/resources/previews/003/424/066/non_2x/funny-little-girl-in-round-glasses-photo.jpg"
+              alt="Story 5"
+            />
+            <p>Melina</p>
+          </div>
+          <div class="story">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeDazxTEuKmXj0IRS6GMcOFI70sA8hX5vSgA&s"
+              alt="Story 6"
+            />
+            <p>Vera</p>
+          </div>
+          <div class="story">
+            <img
+              src="https://www.recordnet.com/gcdn/presto/2021/03/22/NRCD/9d9dd9e4-e84a-402e-ba8f-daa659e6e6c5-PhotoWord_003.JPG"
+              alt="Story 7"
+            />
+            <p>Tara</p>
+          </div>
+          <div class="story">
+            <img
+              src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              alt="Story 8"
+            />
+            <p>Miya</p>
+          </div>
+          <div class="story">
+            <img
+              src="https://t4.ftcdn.net/jpg/07/08/47/75/360_F_708477508_DNkzRIsNFgibgCJ6KoTgJjjRZNJD4mb4.jpg"
+              alt="Story 9"
+            />
+            <p>Nelle</p>
+          </div>
+        </div>
       </div>
 
       <div class="tweetBox">
-        <div class="tweetBox__tabs">
-          <span class="active">For you</span>
-          <span>Following</span>
-        </div>
-        <form>
-          <div class="tweetbox__input">
+        <form id="tweetForm">
+          <div class="tweetbox_input">
             <img
-              src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAyL3BmLWljb240LWppcjIwNjQtcG9yLTAzLWxjb3B5LnBuZw.png"
-              alt="User Avatar"
+              src="https://static.vecteezy.com/system/resources/previews/034/779/514/original/winter-coat-icon-simple-illustration-free-vector.jpg"
+              alt="Avatar"
             />
-            <input type="text" placeholder="What is happening?!" />
+
+            <input type="text" id="tweetText" placeholder="What's new?" />
           </div>
+          <div class="tweetbox_icons">
+            <i class="uil uil-image"></i> Photo/Video
+            <i class="uil uil-user-plus"></i> Tag Friends
+            <i class="uil uil-smile"></i> Feeling/Activity
+            <i class="uil uil-ellipsis-h"></i> ...
 
-          
-
-            <button class="tweetBox__tweetButton" type="submit">Post</button>
+            <button type="submit" class="tweetBox_tweetButton">Post</button>
           </div>
         </form>
       </div>
 
-      <div class="post">
-        <div class="post__avatar">
-          <img
-            src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAyL3BmLWljb240LWppcjIwNjQtcG9yLTAzLWxjb3B5LnBuZw.png"
-            alt=""
-          />
-        </div>
-
-        <div class="post__body">
-          <div class="post__header">
-            <div class="post__headerText">
-              <h3>
-                Mehak Sadiq Ali
-                <span class="post__headerSpecial"
-                  ><span class="material-icons post__badge"> verified </span
-                  >@meky.az</span
-                >
-              </h3>
-            </div>
-            <div class="post__headerDescription">
-              <p>Calm, refreshing, serene, balanced, rejuvenating.</p>
-            </div>
-          </div>
-          <img
-            src="https://depositphotos-blog.s3.eu-west-1.amazonaws.com/uploads/2017/07/Soothing-nature-backgrounds-2.webp"
-            alt=""
-          />
-          <div class="post__footer">
-            <span class="material-icons"> repeat </span>
-            <span class="material-icons"> favorite_border </span>
-            <span class="material-icons"> publish </span>
-          </div>
-        </div>
-      </div>
-
-      <div class="post">
-        <div class="post__avatar">
-          <img
-            src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAyL3BmLWljb240LWppcjIwNjQtcG9yLTAzLWxjb3B5LnBuZw.png"
-            alt=""
-          />
-        </div>
-
-        <div class="post__body">
-          <div class="post__header">
-            <div class="post__headerText">
-              <h3>
-                Mehak Sadiq Ali
-                <span class="post__headerSpecial"
-                  ><span class="material-icons post__badge"> verified </span
-                  >@mekky.az</span
-                >
-              </h3>
-            </div>
-            <div class="post__headerDescription">
-              <p>
-                Nature is not a place to visit; it is home – where the soul
-                finds serenity and the heart feels alive.
-              </p>
-            </div>
-          </div>
-          <img
-            src="https://img.freepik.com/premium-photo/egyptian-desert-with-ancient-pyramids-sandy-landscape-fantasy-view-generative-ai-landscape-sands-monuments-historical-egypt-concept-history-nature-pharaoh_788189-11117.jpg"
-            alt=""
-          />
-          <div class="post__footer">
-            <span class="material-icons"> repeat </span>
-            <span class="material-icons"> favorite_border </span>
-            <span class="material-icons"> publish </span>
-          </div>
-        </div>
-      </div>
+      <div id="postList"></div>
     </div>
 
- 
     <div class="widgets">
       <div class="widgets__input">
-        <span class="material-icons widgets__searchIcon"> search </span>
-        <input type="text" placeholder="Search Twitter" />
+        <i class="uil uil-search searchWidget"></i>
+        <input type="text" placeholder="Search" />
       </div>
 
       <div class="widgets__widgetContainer">
         <h2>What's happening</h2>
 
-       
         <div class="trendingItem">
           <div class="trendingItem__content">
-            <a
-              href="https://x.com/i/events/1790907663011729408"
-              target="_blank"
-            >
+            <a href="https://example.com/news1" target="_blank">
               <img
-                src="https://pbs.twimg.com/card_img/1868883864128458752/5TOyaT1X?format=jpg&name=small"
-                alt="Bears at Vikings"
+                src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Saturn_-_High_Resolution%2C_2004.jpg"
+                alt="Breaking News"
                 class="trendingItem__image"
               />
               <div class="trendingItem__details">
-                <strong>Bears at Vikings</strong>
-                <p>1 hour ago</p>
+                <strong>Breaking: Major Tech Announcement</strong>
+                <p>5 minutes ago</p>
               </div>
             </a>
           </div>
         </div>
-      </div>
 
-      <!-- Correction -->
+        <div class="trendingItem">
+          <p>Entertainment · Trending</p>
+          <a href="https://example.com/news3" target="_blank">
+            <strong>Top Actor Announces New Movie</strong>
+          </a>
+          <p>1 hour ago</p>
+        </div>
+        <div class="videoContainer">
+          <h3>Watch This!</h3>
+          <video controls width="100%">
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            video tag.
+          </video>
+        </div>
+        <div class="trendingItem">
+          <p>Technology · Trending</p>
+          <a href="https://example.com/news1" target="_blank">
+            <strong>New AI Breakthrough in Healthcare</strong>
+          </a>
+          <p>10 minutes ago</p>
+        </div>
 
-      <div class="trendingItem">
-        <p>Sports · Trending</p>
-        <a
-          href="https://x.com/search?q=McCaskeys&src=trend_click"
-          target="_blank"
-        >
-          <strong>McCaskeys</strong>
-        </a>
-      </div>
+        <div class="trendingItem">
+          <p>Sports · Trending</p>
+          <a href="https://example.com/news2" target="_blank">
+            <strong>Global Soccer Championship Finals</strong>
+          </a>
+          <p>25 minutes ago</p>
+        </div>
 
-      <div class="trendingItem">
-        <p>Sports · Trending</p>
-        <a
-          href="https://x.com/search?q=DeRozan&src=trend_click&vertical=trends"
-          target="_blank"
-        >
-          <strong>DeRozan</strong>
-        </a>
-      </div>
+        <div class="trendingItem">
+          <p>Entertainment · Trending</p>
+          <a href="https://example.com/news3" target="_blank">
+            <strong>Famous Director Announces Trilogy</strong>
+          </a>
+          <p>45 minutes ago</p>
+        </div>
 
-      <div class="trendingItem">
-        <p>Sports · Trending</p>
-        <a
-          href="https://x.com/search?q=%22Jamal+Murray%22&src=trend_click&vertical=trends"
-          target="_blank"
-        >
-          <strong>Jamal Murray</strong>
-        </a>
-        <p>1,232 posts</p>
-      </div>
+        <div class="trendingItem">
+          <p>Business · Trending</p>
+          <a href="https://example.com/news4" target="_blank">
+            <strong>Major Tech Company Surpasses Revenue Goals</strong>
+          </a>
+          <p>1 hour ago</p>
+        </div>
 
-      <div class="trendingItem">
-        <p>Sports · Trending</p>
-        <a
-          href="https://x.com/search?q=%22Aaron+Gordon%22&src=trend_click&vertical=trends"
-          target="_blank"
-        >
-          <strong>Aaron Gordon</strong>
-        </a>
+        <div class="trendingItem">
+          <p>Music · Trending</p>
+          <a href="https://example.com/news5" target="_blank">
+            <strong>Chart-Topping Artist Releases New Album</strong>
+          </a>
+          <p>2 hours ago</p>
+        </div>
       </div>
     </div>
+    <main></main>
 
-    <!-- Page-specific code -->
+    <footer></footer>
+
     <script src="posts.js"></script>
   </body>
 </html>

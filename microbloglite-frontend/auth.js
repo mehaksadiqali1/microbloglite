@@ -59,6 +59,8 @@ function login(loginData) {
     });
 }
 
+
+
 // This is the `logout()` function you will use for any logout button
 // which you may include in various pages in your app. Again, READ this
 // function and you will probably want to re-use parts of it for other
@@ -87,6 +89,6 @@ function logout() {
       // error with the fetch request above.
 
       window.localStorage.removeItem("login-data"); // remove login data from LocalStorage
-      window.location.assign("/"); // redirect back to landing page (index.html)
+      window.location.assign("login.html"); // redirect back to landing page (index.html)
     });
 }
